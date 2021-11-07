@@ -1,0 +1,114 @@
+.weather-container{
+    background-color: #ffffff;
+    height: 80vh;
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.state-select{
+    width: 55%;
+    border: 0;
+    background-color: #EDEDED;
+    height: 40px;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #808080;
+}
+.select-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.select-error-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.climateinfo-container{
+    display: flex;
+    background-color: #A1E0FF;
+    width: 70%;
+    justify-content: space-evenly;
+    border-radius: 18px;
+    margin-top: 20px;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.temp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vr{
+    display: inline-block;
+  width: 3px;
+  background-color: #ffffff;
+  margin: 0 10px;
+  height: 60px;
+}
+.temp-item{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 65px;
+    height: 100px;
+    font-family:'Podkova';
+    font-weight: 400;
+}
+.loading{
+    font-size: 22px;
+}
+.section-title{
+    font-size: 18px;
+    margin: 10px;
+    color: #646464;
+}
+@media screen and (max-width: 768px) {
+.weather-container{
+    padding: 20px;
+    height: 81vh;
+}
+.state-select{
+    width: 100%;
+}
+.vr{
+    display: none;
+}
+.climateinfo-container{
+    flex-direction: column;
+}
+}
+@media screen and (max-width: 770px) {
+   .climateinfo-container{
+       width: 100%;
+       flex-direction: column;
+   }
+   .temp-item{
+       height: 60px;
+       font-size: 60px;
+   }
+   .vr{
+       display: none;
+   }
+    }
+
+    @media screen and (max-width: 980px) {
+        .temp-item{
+            height: 60px;
+            font-size: 50px;
+        }
+      
+         }

@@ -1,0 +1,104 @@
+.header-container{
+    height: 40px;
+    padding: 15px;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-container{
+    display: flex;
+    align-items: center;
+}
+.profile-logo{
+    height: 40px;
+    margin-left: 10px;
+}
+.profile-name{
+    font-size: 16px;
+}
+.date{
+    font-size: 24px;
+    font-weight: 400;
+}
+.sm-header{
+    display: none;
+}
+.menu-icon{
+    font-size: 25px;
+}
+.close-icon{
+    font-size: 22px;
+}
+.menu-list{
+    position: absolute;
+    right: 20px;
+    width: 180px;
+    background-color: #ffffff;
+    list-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+}
+.sm-active-menu-item{
+background-color: #A1E0FF;
+color: #ffffff;
+padding:10px;
+    font-size: 16px;
+}
+.closed-menu-list{
+    display: none;
+}
+.sm-menu-item{
+    padding:10px;
+    font-size: 16px;
+    color: #A1E0FF;
+    font-weight: 500;
+}
+.sm-menu-icon{
+    height: 15px;
+    width: 15px;
+    margin-right: 8px;
+}
+.menu-btn{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+@media screen and (width: 768px) {
+    .header-container{
+        height: 35px;
+    }
+  }
+@media screen and (max-width: 570px) {
+   .profile-container{
+       display: none;
+   }
+   .date{
+       font-size: 18px;
+   }
+   .sm-header{
+       display: block;
+   }
+  }
+.sm-logo-img{
+    display: none;
+}
+  @media screen and (max-width: 768px) {
+    .date{
+        font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    .date{
+        display: none;
+    }
+    .sm-logo-img{
+        display: inline;
+    }
+  }

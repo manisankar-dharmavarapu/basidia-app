@@ -1,0 +1,92 @@
+.content-container{
+    background-color: #ffffff;
+    height: 80vh;
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.form-input{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+.input-styles{
+    background-color: #EDEDED;
+    height: 40px;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 10px;
+    width: 400px;
+    font-size: 20px;
+    color: #808080;
+}
+.active-input{
+    border: 0;
+}
+.select-styles{
+    width: 412px;
+    border: 0;
+    background-color: #EDEDED;
+    height: 40px;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #808080;
+}
+.input-label{
+    font-size: 20px;
+    width: 110px;
+}
+.btn-styles{
+    width: 100%;
+    height: 38px;
+    background-color: #A1E0FF;
+    outline: none;
+    color: #ffffff;
+    border-radius: 10px;
+    border: 0px;
+    font-size: 18px;
+}
+.error-input{
+    border: 1px solid #ff3333;
+}
+.error-msg{
+    font-size: 16px;
+    color: #ff3333;
+}
+.input-error-container{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+    .form-input{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        align-items: flex-start;
+    }
+    .input-styles{
+        height: 35px;
+        font-size: 18px;
+    }
+    .input-label{
+        font-size: 18px;
+    }
+    .select-styles{
+        width: 100%;
+    }
+    .input-styles{
+        width: 95%;
+    }
+    .content-container{
+        padding: 20px;
+        height: 76vh;
+    }
+    .input-error-container{
+        width: 100%;
+    }
+  }
