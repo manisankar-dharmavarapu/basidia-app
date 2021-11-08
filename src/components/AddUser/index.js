@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import {useDispatch,useSelector} from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addUser } from "../../redux/userSlice";
 import './index.css'
 
 const AddUser = () => {
-    const dispatch=useDispatch()
-    const statesData=useSelector((state)=>state.users.statesData)
+    const dispatch = useDispatch()
+    const statesData = useSelector((state) => state.users.statesData)
     const [userData, setUserData] = useState({
-        id:Math.floor(Math.random() * 1000000000000),
+        id: Math.floor(Math.random() * 1000000000000),
         userName: '',
         email: '',
         phone: '',
@@ -57,17 +57,18 @@ const AddUser = () => {
         const errors = {}
         // eslint-disable-next-line
         const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        
+        const phoneRegex = /^((\\+91-?)|0)?[0-9]{10}$/;
+
         if (userData.userName === "") {
             errors.userName = "Please enter user name"
         }
 
-        if (userData.phone === "") {
-            errors.phone = "Please enter phone number"
-        } else {
-            if (userData.phone.length < 10) {
+        if (userData.phone) {
+            if (!phoneRegex.test(userData.phone)) {
                 errors.phone = "Please enter valid phone number (10 digits)"
             }
+        } else {
+            errors.phone = "Please enter phone number"
         }
 
         if (userData.email) {
@@ -91,7 +92,7 @@ const AddUser = () => {
     const { errors, isValid } = validate()
     return (
         <div>
-      <p className='section-title'>Add User</p>
+            <p className='section-title'>Add User</p>
             <div className='content-container'>
                 <form>
                     <div className='form-input'>
