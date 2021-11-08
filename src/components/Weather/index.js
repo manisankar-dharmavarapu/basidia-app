@@ -59,9 +59,8 @@ const Weather = () => {
     if (selectedState !== '') {
       getWeatherInfo()
     }
+    // eslint-disable-next-line
   }, [selectedState])
-
-  console.log(weatherInfo, "data")
 
   const renderingError = () => (
     <div>

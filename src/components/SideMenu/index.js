@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Logo from '../../assets/Logo.png'
 import AddUser from '../../assets/add-user.png'
 import Users from '../../assets/users.png'
@@ -46,7 +46,6 @@ function SideMenu() {
 
     const containerTheme = 'light-theme-container lg-menu-container side-menu-position'
     return (
-        // <div style={{ height: '100vh' }}>
         <div className={containerTheme}>
             <ul className="lg-menu-list">
                 <div className="img-position">
@@ -56,7 +55,6 @@ function SideMenu() {
                 {menuList.map((item) => renderMenuItem(item))}
             </ul>
         </div>
-        // </div>
     )
 }
 

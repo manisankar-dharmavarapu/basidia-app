@@ -55,9 +55,9 @@ const AddUser = () => {
 
     const validate = () => {
         const errors = {}
-
+        // eslint-disable-next-line
         const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
+        
         if (userData.userName === "") {
             errors.userName = "Please enter user name"
         }
@@ -95,8 +95,7 @@ const AddUser = () => {
             <div className='content-container'>
                 <form>
                     <div className='form-input'>
-
-                        <label className="input-label" htmlFor="username">UserName</label>
+                        <label className="input-label" htmlFor="username">Username</label>
                         <div className="input-error-container">
                             <input
                                 type="text"

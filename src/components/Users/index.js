@@ -16,13 +16,17 @@ const Users = () => {
         setAllUsers(data.users)
         setUsers(data.users)
     }, [data])
-    console.log(data, allUsers, "uuuuu")
 
     const onSearch = (e) => {
         const res = allUsers.filter((user) => user.userName.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
         setUsers(res)
+        if (res.length === 0) {
+            setSearchStatus(true)
+        } else {
+            setSearchStatus(false)
+        }
     }
-
+    
     const getAge = (birthdate) => {
         var years = moment().diff(birthdate, 'years');
         return years
@@ -78,7 +82,9 @@ const Users = () => {
                         <BsSearch />
                     </div>
                 </div>
-                {users.length === 0 ? <div><p>No Data</p></div> : renderUserDetails()}
+                {users.length === 0 ? searchStatus ? <div className='no-users'><p>No Users Found.</p></div>
+                    : <div className='no-users'><p>No Users Available.Please Add Users</p></div>
+                    : renderUserDetails()}
             </div>
         </div>
     )
